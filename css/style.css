@@ -462,3 +462,47 @@ header {
         padding-top: var(--omne-height);
     }
 }
+
+/* Kontakt */
+.contact{
+    text-align: center;
+    background-color: var(--background-white);
+}
+
+.contact > h2{
+    color: var(--text-dark); 
+}
+
+.contact>p{
+    color: var(--text-grey);
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-content-container{
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
+
+.contact-content-info>h3,
+.contact-form>h3{
+    color: var(--text-dark);
+    font-size: 1.5rem;
+}
+
+.contact-card{
+    display: flex;
+    margin: 15px;
+    padding: 20px;
+    background-color: var(--background-normal-white);
+    width: fit-content;
+    margin-left:auto;
+    margin-right: auto;  
+    align-items: center;                                                                     
+}
+
+.contact-card-content{
+    text-align: start;
+    margin-left: 10px;
+}
