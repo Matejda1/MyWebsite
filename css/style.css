@@ -701,8 +701,12 @@ header {
 }
 
 @media (max-width: 400px) {
+    .contact-card{
+        width: 300px;
+    }
+    
     .contact-form {
-        width: 350px;
+        width: 300px;
         padding-left: 30px;
         padding-right: 30px;
     }
