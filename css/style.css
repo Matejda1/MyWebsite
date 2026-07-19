@@ -588,14 +588,15 @@ header {
     padding-right: 100px;
 }
 
-.contact-card-content>p {
+.contact-card-title {
     color: var(--text-grey);
+    font-size: 1.2rem;
     margin-bottom: 2px;
 }
 
-.contact-card-content>a {
+.contact-card-info-text {
     color: var(--text-dark);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .contact-form {
@@ -700,6 +701,7 @@ header {
 .contact-form>form:valid>button {
     background-color: var(--primary-blue);
     border: 1px solid var(--primary-blue);
+    cursor: pointer;
 }
 
 @media (max-width: 850px) {
@@ -708,7 +710,7 @@ header {
     }
 
     .contact-card {
-        width: 350px;
+        width: 90%;
     }
 
     .contact-card-content {
@@ -717,16 +719,17 @@ header {
 
     .contact-form {
         margin-top: 20px;
+        width: 90%;
     }
 }
 
 @media (max-width: 450px) {
     .contact-card {
-        width: 300px;
+        width: 90%;
     }
 
     .contact-form {
-        width: 300px;
+        width: 90%;
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -775,6 +778,16 @@ footer {
     padding: 10px;
     font-size: 1.15rem;
     color: var(--text-grey);
+}
+
+.footer-oficials>a{
+    color: var(--text-grey);
+}
+
+.footer-oficials>a:hover{
+    color: var(--secondary-blue);
+    text-decoration: underline;
+    transition: var(--transition-secondary);
 }
 
 @media (max-width: 768px) {

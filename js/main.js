@@ -33,6 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
         formular.addEventListener("submit", function (e) {
             e.preventDefault();
             submitBtn.style.background = "#D3D3D3"
+            submitBtn.disabled = true;
+
+            const honeypot = document.getElementById("honeypot").value;
+            if (honeypot !== "") {
+                console.log("Robot odhalen!")
+                showAlert("Zpráva uspěšně odeslána!", "Vaše zpráva se uspěšně odeslala. Zachvilku se na ni podívam.", "Zavřít");
+                return;
+            }
 
             const scriptURL = "https://script.google.com/macros/s/AKfycbztQ-FtQQVU8nVSFW3nw4bWiUqEK07-Dh3P06Pc-l7htxsN2pTFbWl1QO2HwCTyJEe8/exec";
 
@@ -52,6 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 .catch(error => {
                     console.error("Chyba při odesílání:", error);
                     showAlert("Chyba sítě!", "Zprávu nebylo možné odeslat. Zkontrolujte připojení.", "Zavřít");
+                })
+                .finally(() => {
+                    submitBtn.style.background = "";
+                    submitBtn.disabled = false;
                 });
         });
     }
@@ -79,5 +91,5 @@ confirmABtn.addEventListener("click", () => {
 
 // Footer
 let year = new Date().getFullYear();
-const footerYear = document.querySelector("#footer-year");
+const footerYear = document.querySelector(".footer-year");
 footerYear.innerHTML = year;
