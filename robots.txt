@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.patrikmatejka.cz/sitemap.xml
+Sitemap: https://patrikmatejka.cz/sitemap.xml
